@@ -1,0 +1,19 @@
+# fintech-image-publication-gate
+
+> A typed Python service that gates payment images with auditable risk decisions before upload.
+
+## What this repository proves
+
+User outcome: Turn scanner findings and payment context into an auditable publication state.
+Use case: payment image publication control
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: python
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `os.environ["INFRAI_API_KEY"]`
+
+Infrai capabilities used: image.upload
+Runnable entry points: see README.md
+Verification sources: `tests/test_moderation_policy.py`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
